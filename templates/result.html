@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Topic and Conclusion of uploaded Video</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .result-container {
+        width: 50%;
+        text-align: center;
+      }
+      p {
+        font-size: 20px; /* Change to desired font size */
+        font-family: Arial, sans-serif; /* Change to desired font family */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="result-container">
+      <h1>Video Processing Result</h1>
+      {% if summary %}
+      <p>{{ summary }}</p>
+      {% else %}
+      <p>No summary available</p>
+      {% endif %}
+    </div>
+    <div class="trasnscript-download">
+      <a
+        href="/Users/GO20402049/Desktop/video_summary_version/V1_youtube/transcript_path/transcript.doc"
+        download
+      >
+        <button type="button">Download</button>
+      </a>
+    </div>
+  </body>
+</html>

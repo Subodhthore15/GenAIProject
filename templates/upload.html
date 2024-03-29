@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upload your Video to know the topic and conclusion.</title>
+    <style>
+      body {
+        text-align: center;
+        height: 100vh;
+      }
+
+      form {
+        display: grid;
+        margin: 5rem auto;
+        place-items: center;
+        width: 50%;
+        /* background-color: rebeccapurple; */
+      }
+      label {
+        margin-bottom: 10px;
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+      input {
+        padding: 5px;
+        width: 200px;
+      }
+      .youtube {
+        margin-top: 1rem;
+      }
+      .youtube-submit {
+        margin-top: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Upload your Video to know the topic and conclusion.</h1>
+    <form method="POST" enctype="multipart/form-data">
+      <label for="file">1. Upload your video</label>
+      <input type="file" name="file" /><br /><br />
+
+      <button type="submit">Upload</button>
+      <label for="youtube" class="youtube">2. Paste your youtube link</label>
+      <input type="text" name="youtube" id="youtube" />
+      <button type="" class="youtube-submit">Submit</button>
+    </form>
+  </body>
+</html>
