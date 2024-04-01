@@ -44,8 +44,7 @@ from GptSummary import *
 #from ClassLab45API import *
 import pytube
 
-# hello new comment 
-print("addition is",3+2)
+
 
 url = "https://youtu.be/Xwuj_Ss8HVc?si=YNF5trmIea2nvu-a"
 
@@ -53,11 +52,11 @@ youtube=pytube.YouTube(url)
 
 stream=youtube.streams.get_audio_only()
 
-stream.download(output_path=r'C:\Users\Admin\Desktop\MainProjectGenAI\youtube_path', filename='youtube_video.mp4') # store in the localhost
+stream.download(output_path=r'youtube_path', filename='youtube_video.mp4') # store in the localhost
 
 
 
-path = r'C:\Users\Admin\Desktop\MainProjectGenAI\youtube_path\youtube_video.mp4'
+path = r'youtube_path\youtube_video.mp4'
 
 # Creating object to get the text from the video
 vidText = LinkVideoTimelyText(path)
