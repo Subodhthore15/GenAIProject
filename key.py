@@ -1,2 +1,0 @@
-key = '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'
-# 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
