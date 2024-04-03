@@ -30,9 +30,9 @@ def process_video(video_path):
 def process_youtube_link(url):
     youtube=pytube.YouTube(url)
     stream=youtube.streams.get_audio_only()
-    stream.download(output_path=r'C:\Users\Admin\Desktop\MainProjectGenAI\youtube_path', filename='youtube_video.mp4') # store in the localhost
-    path = r'C:\Users\Admin\Desktop\MainProjectGenAI\youtube_path\youtube_video.mp4'
-    vidText = Videotext(path)
+    stream.download(output_path=r'youtube_path', filename='youtube_video.mp4') # store in the localhost
+    path = r'youtube_path\youtube_video.mp4'
+    vidText = LinkVideoTimelyText(path)
     transcript = vidText.getText()
     return transcript
 
@@ -45,7 +45,7 @@ def get_final_summary(system_msg, transcript):
 
 # create function to download the transcript
 def download_transcript(trascript):
-    text_file = open(r'C:\Users\Admin\Desktop\MainProjectGenAI\transcript_path\transcript.doc', 'w')
+    text_file = open(r'transcript_path\transcript.doc', 'w')
     trascript = trascript
     text_file.write(trascript)
     text_file.close()
@@ -79,6 +79,7 @@ def upload_file():
         download_transcript(transcript)
         print(transcript)
         final_summary = get_final_summary(system_msg, transcript)
+        print(final_summary)
         return render_template('result.html', summary = final_summary)
 
     # else:
