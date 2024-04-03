@@ -45,7 +45,6 @@ from GptSummary import *
 import pytube
 
 
-
 url = "https://youtu.be/TXaRvGshcM8?si=lDYQdkrz8_7F4GgO"
 
 youtube=pytube.YouTube(url)
