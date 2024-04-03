@@ -21,6 +21,7 @@ class LinkVideoTimelyText:
         self.model = whisper.load_model('base.en')
         self.option = whisper.DecodingOptions(language='en', fp16=False)
         
+    # Here we can save the time by reading .vtt file directly.   
     def getText(self):
         self.results = self.model.transcribe(self.path)
         save_target = 'hello.vtt'

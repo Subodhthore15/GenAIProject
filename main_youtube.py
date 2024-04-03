@@ -61,10 +61,10 @@ path = r'youtube_path\youtube_video.mp4'
 # Creating object to get the text from the video
 vidText = LinkVideoTimelyText(path)
 transcript = vidText.getText()
-# print(transcript)
+print(transcript)
 
 # Creating object of class for generating summary using gpt
-gptSumm = Gptresponse(TimelyTextSystemMsg, transcript)  # For OpenAi
+gptSumm = Gptresponse(system_msg, transcript)  # For OpenAi
 final_summary = gptSumm.getSummary()
 
 
