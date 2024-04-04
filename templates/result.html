@@ -25,10 +25,10 @@
     <div class="result-container">
       <h1>Video Processing Result</h1>
       {% if final_summary %}
-      <p>Topic: {{ topic }}</p> <br>
-      <p>Sentiment: {{ sentiment }}</p> <br>
-      <p>Conclusion: {{ conclusion }}</p> <br>
-      <p>Summary: {{ summary }}</p>
+      <p><strong>Topic:</strong> {{ topic }}</p>
+      <p><strong>Sentiment:</strong> {{ sentiment }}</p>
+      <p><strong>Conclusion:</strong> {{ conclusion }}</p>
+      <p><strong>Summary:</strong> {{ summary }}</p>
       {% else %}
       <p>No summary available</p>
       {% endif %}
