@@ -6,6 +6,7 @@ from GptSummary import *
 # from ClassLab45API import *
 from GptSummary import *
 import pytube
+from extract_information import *
 
 app = Flask(__name__)
 
@@ -80,7 +81,20 @@ def upload_file():
         print(transcript)
         final_summary = get_final_summary(system_msg, transcript)
         print(final_summary)
-        return render_template('result.html', summary = final_summary)
+        
+        # Call the function
+        topic, sentiment, conclusion, summary = extract_information(final_summary)
+        
+        # Displaying the variables
+        print("Topic:", topic)
+        print()
+        print("Sentiment:", sentiment)
+        print()
+        print("Conclusion:", conclusion)
+        print()
+        print("Summary:", summary)
+        
+        return render_template('result.html', final_summary = final_summary, topic = topic, sentiment= sentiment, conclusion = conclusion, summary=summary)
 
     # else:
     #     return 'File type not allowed'

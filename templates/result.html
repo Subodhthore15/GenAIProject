@@ -24,18 +24,19 @@
   <body>
     <div class="result-container">
       <h1>Video Processing Result</h1>
-      {% if summary %}
-      <p>{{ summary }}</p>
+      {% if final_summary %}
+      <p>Topic: {{ topic }}</p> <br>
+      <p>Sentiment: {{ sentiment }}</p> <br>
+      <p>Conclusion: {{ conclusion }}</p> <br>
+      <p>Summary: {{ summary }}</p>
       {% else %}
       <p>No summary available</p>
       {% endif %}
     </div>
     <div class="trasnscript-download">
-      <a
-        href="/Users/GO20402049/Desktop/video_summary_version/V1_youtube/transcript_path/transcript.doc"
-        download
-      >
-        <button type="button">Download</button>
+      <a href = "C:\Users\GOVIND\Desktop\GenAI_Portfolio_version\GenAIProject\transcript_path\transcript.doc"
+      Download = "test_image">
+         <button type = "button"> Download </button>
       </a>
     </div>
   </body>
