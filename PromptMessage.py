@@ -22,7 +22,7 @@
 #                 and also give the summary. for summary you need to give the topic name for each time frame discussion.
 #                 for example:
 #                 '0:00:00----> 0:00:02.100000
-#                 Well, let's focus on ITC.'
+#                 Well, let's focus on ITC..'
                 
 #                 so you need to give the topic for above discussion like wise give the short topic name for each time frame.
                 

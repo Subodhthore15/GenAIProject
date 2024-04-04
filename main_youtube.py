@@ -63,7 +63,7 @@ transcript = vidText.getText()
 print(transcript)
 
 # Creating object of class for generating summary using gpt
-gptSumm = Gptresponse(system_msg, transcript)  # For OpenAi
+gptSumm = Gptresponse(system_msg, transcript)  # For OpenAi.
 final_summary = gptSumm.getSummary()
 
 

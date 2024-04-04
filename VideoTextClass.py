@@ -14,7 +14,7 @@ class Videotext:
         
 
 # embedding link --> VideoText -> with timely text 
-    # getting timely text from video only
+    # getting timely text from video only.
 class LinkVideoTimelyText:
     def __init__(self, path):
         self.path = path

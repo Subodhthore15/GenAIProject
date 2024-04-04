@@ -38,7 +38,7 @@ def process_youtube_link(url):
 
 
 def get_final_summary(system_msg, transcript):
-    # Creating object of class for generating summary using gpt
+    # Creating object of class for generating summary using gpt.
     gptSumm = Gptresponse(system_msg, transcript)
     final_summary = gptSumm.getSummary()
     return final_summary
