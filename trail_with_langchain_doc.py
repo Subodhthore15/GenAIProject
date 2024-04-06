@@ -15,7 +15,7 @@ import os
 
 os.environ["OPENAI_API_KEY"] = key
 
-loader = PyPDFLoader("uploads\EJ1172284.pdf")
+loader = PyPDFLoader("uploads\w27392.pdf")
 
 pages = loader.load_and_split()
 
